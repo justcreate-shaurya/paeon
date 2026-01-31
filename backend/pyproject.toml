@@ -27,7 +27,7 @@ sentence-transformers = "^2.3.0"
 spacy = "^3.7.0"
 scispacy = "^0.5.3"
 langdetect = "^1.0.9"
-python-multipart = "^0.0.6"
+python-multipart = "^0.0.22"
 python-jose = {extras = ["cryptography"], version = "^3.3.0"}
 passlib = {extras = ["bcrypt"], version = "^1.7.4"}
 reportlab = "^4.0.0"

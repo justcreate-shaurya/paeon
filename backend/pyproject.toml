@@ -1,0 +1,67 @@
+[tool.poetry]
+name = "paeon-ai-backend"
+version = "1.0.0"
+description = "Paeon AI - Clinical-to-Vernacular Bridge Backend Services"
+authors = ["Paeon AI Team <team@paeonai.com>"]
+license = "Proprietary"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.109.0"
+uvicorn = {extras = ["standard"], version = "^0.27.0"}
+pydantic = "^2.5.0"
+pydantic-settings = "^2.1.0"
+sqlalchemy = "^2.0.25"
+asyncpg = "^0.29.0"
+alembic = "^1.13.0"
+redis = "^5.0.0"
+celery = {extras = ["redis"], version = "^5.3.0"}
+httpx = "^0.26.0"
+openai = "^1.10.0"
+langchain = "^0.1.0"
+langchain-openai = "^0.0.5"
+langchain-community = "^0.0.13"
+qdrant-client = "^1.7.0"
+sentence-transformers = "^2.3.0"
+spacy = "^3.7.0"
+scispacy = "^0.5.3"
+langdetect = "^1.0.9"
+python-multipart = "^0.0.6"
+python-jose = {extras = ["cryptography"], version = "^3.3.0"}
+passlib = {extras = ["bcrypt"], version = "^1.7.4"}
+reportlab = "^4.0.0"
+pillow = "^10.2.0"
+weasyprint = "^60.0"
+jinja2 = "^3.1.0"
+boto3 = "^1.34.0"
+structlog = "^24.1.0"
+sentry-sdk = {extras = ["fastapi"], version = "^1.39.0"}
+prometheus-client = "^0.19.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"
+pytest-asyncio = "^0.23.0"
+pytest-cov = "^4.1.0"
+black = "^24.1.0"
+ruff = "^0.1.0"
+mypy = "^1.8.0"
+pre-commit = "^3.6.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 100
+target-version = ['py311']
+include = '\.pyi?$'
+
+[tool.ruff]
+line-length = 100
+select = ["E", "F", "W", "I", "N", "UP", "B", "C4"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+ignore_missing_imports = true

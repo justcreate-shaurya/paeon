@@ -1,12 +1,18 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { Smartphone, Download, Loader2, CheckCircle2, AlertTriangle, FileImage, FileText, RefreshCw } from 'lucide-react';
 import { useAssetStore } from '../lib/store';
 import { assetsApi, GeneratedAsset } from '../lib/api';
+=======
+import { useState } from 'react';
+import { Smartphone, Download, Loader2, CheckCircle2, AlertTriangle } from 'lucide-react';
+>>>>>>> e12f48468b9193390c7af47631d2c7846def7a34
 
 interface LiveAssetPreviewProps {
   regulatoryGuardrails: boolean;
 }
 
+<<<<<<< HEAD
 // Demo asset data for development mode
 const demoAsset: GeneratedAsset = {
   id: 'demo-1',
@@ -134,6 +140,24 @@ export function LiveAssetPreview({ regulatoryGuardrails }: LiveAssetPreviewProps
 
   const displayAsset = currentAsset || demoAsset;
 
+=======
+export function LiveAssetPreview({ regulatoryGuardrails }: LiveAssetPreviewProps) {
+  const [isExporting, setIsExporting] = useState(false);
+  const [exportComplete, setExportComplete] = useState(false);
+
+  const handleExport = () => {
+    setIsExporting(true);
+    setExportComplete(false);
+
+    // Simulate export process
+    setTimeout(() => {
+      setIsExporting(false);
+      setExportComplete(true);
+      setTimeout(() => setExportComplete(false), 3000);
+    }, 2000);
+  };
+
+>>>>>>> e12f48468b9193390c7af47631d2c7846def7a34
   return (
     <div className="flex flex-col h-full">
       <div className="mb-4 flex items-center justify-between">
@@ -144,6 +168,7 @@ export function LiveAssetPreview({ regulatoryGuardrails }: LiveAssetPreviewProps
         <Smartphone className="w-4 h-4 text-gray-400" />
       </div>
 
+<<<<<<< HEAD
       {/* Drug Selector */}
       <div className="flex gap-2 mb-4">
         <select
@@ -190,6 +215,10 @@ export function LiveAssetPreview({ regulatoryGuardrails }: LiveAssetPreviewProps
 
       {/* Mobile Preview Frame */}
       <div className="flex-1 flex items-center justify-center mb-4 overflow-y-auto">
+=======
+      {/* Mobile Preview Frame */}
+      <div className="flex-1 flex items-center justify-center mb-4">
+>>>>>>> e12f48468b9193390c7af47631d2c7846def7a34
         <div className="w-full max-w-[280px] bg-gradient-to-br from-gray-50 to-gray-100 rounded-[32px] p-3 shadow-xl">
           <div className="bg-white rounded-[24px] overflow-hidden shadow-inner">
             {/* Phone Notch */}
@@ -205,8 +234,13 @@ export function LiveAssetPreview({ regulatoryGuardrails }: LiveAssetPreviewProps
                   <span className="text-lg">💊</span>
                 </div>
                 <div className="flex-1 min-w-0">
+<<<<<<< HEAD
                   <h3 className="font-medium text-[#2D2D2D] text-sm">{displayAsset.drug_name}</h3>
                   <p className="text-xs text-gray-500">{displayAsset.strength}</p>
+=======
+                  <h3 className="font-medium text-[#2D2D2D] text-sm">Metformin HCl</h3>
+                  <p className="text-xs text-gray-500">500mg Tablet</p>
+>>>>>>> e12f48468b9193390c7af47631d2c7846def7a34
                 </div>
               </div>
 
@@ -214,11 +248,16 @@ export function LiveAssetPreview({ regulatoryGuardrails }: LiveAssetPreviewProps
               <div className="bg-[#3B4D2B]/5 rounded-xl p-3">
                 <div className="text-xs font-medium text-[#3B4D2B] mb-1">How to Take</div>
                 <p className="text-xs text-[#2D2D2D] leading-relaxed">
+<<<<<<< HEAD
                   {displayAsset.content.dosage_instruction}
+=======
+                  Take with meals, twice daily. Swallow whole with water.
+>>>>>>> e12f48468b9193390c7af47631d2c7846def7a34
                 </p>
               </div>
 
               {/* Benefits */}
+<<<<<<< HEAD
               {displayAsset.content.benefits && displayAsset.content.benefits.length > 0 && (
                 <div>
                   <div className="text-xs font-medium text-[#2D2D2D] mb-2">Key Benefits</div>
@@ -235,13 +274,36 @@ export function LiveAssetPreview({ regulatoryGuardrails }: LiveAssetPreviewProps
 
               {/* Fair Balance Warning */}
               {regulatoryGuardrails && displayAsset.content.fair_balance && (
+=======
+              <div>
+                <div className="text-xs font-medium text-[#2D2D2D] mb-2">Key Benefits</div>
+                <ul className="space-y-1">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-3 h-3 text-[#606C38] mt-0.5 flex-shrink-0" />
+                    <span className="text-xs text-[#2D2D2D]">Controls blood sugar</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-3 h-3 text-[#606C38] mt-0.5 flex-shrink-0" />
+                    <span className="text-xs text-[#2D2D2D]">Reduces diabetes complications</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Fair Balance Warning */}
+              {regulatoryGuardrails && (
+>>>>>>> e12f48468b9193390c7af47631d2c7846def7a34
                 <div className="bg-[#D4A574]/10 border border-[#D4A574] rounded-xl p-3">
                   <div className="flex items-start gap-2">
                     <AlertTriangle className="w-3 h-3 text-[#BC6C25] mt-0.5 flex-shrink-0" />
                     <div>
                       <div className="text-xs font-medium text-[#BC6C25] mb-1">Important Safety Information</div>
+<<<<<<< HEAD
                       <p className="text-xs text-[#2D2D2D] leading-relaxed line-clamp-4">
                         {displayAsset.content.fair_balance}
+=======
+                      <p className="text-xs text-[#2D2D2D] leading-relaxed">
+                        May cause lactic acidosis. Avoid if kidney disease present. Report unusual muscle pain immediately.
+>>>>>>> e12f48468b9193390c7af47631d2c7846def7a34
                       </p>
                     </div>
                   </div>
@@ -250,13 +312,18 @@ export function LiveAssetPreview({ regulatoryGuardrails }: LiveAssetPreviewProps
 
               {/* Footer */}
               <div className="text-[10px] text-gray-400 text-center pt-2 border-t border-gray-100">
+<<<<<<< HEAD
                 {displayAsset.content.footer_text || 'Consult your healthcare provider'}
+=======
+                Consult your healthcare provider
+>>>>>>> e12f48468b9193390c7af47631d2c7846def7a34
               </div>
             </div>
           </div>
         </div>
       </div>
 
+<<<<<<< HEAD
       {/* Export Format Toggle */}
       <div className="flex gap-2 mb-3">
         <button
@@ -287,6 +354,12 @@ export function LiveAssetPreview({ regulatoryGuardrails }: LiveAssetPreviewProps
       <button
         onClick={handleExport}
         disabled={isExporting || isLoading}
+=======
+      {/* Export Button */}
+      <button
+        onClick={handleExport}
+        disabled={isExporting}
+>>>>>>> e12f48468b9193390c7af47631d2c7846def7a34
         className={`
           w-full h-11 rounded-xl font-medium text-sm
           transition-all duration-200 shadow-sm
@@ -311,7 +384,11 @@ export function LiveAssetPreview({ regulatoryGuardrails }: LiveAssetPreviewProps
         ) : (
           <span className="flex items-center justify-center gap-2">
             <Download className="w-4 h-4" />
+<<<<<<< HEAD
             <span>Export as {exportFormat.toUpperCase()}</span>
+=======
+            <span>Export as PDF/PNG</span>
+>>>>>>> e12f48468b9193390c7af47631d2c7846def7a34
           </span>
         )}
       </button>

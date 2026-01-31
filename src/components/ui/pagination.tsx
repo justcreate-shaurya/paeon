@@ -3,7 +3,11 @@ import {
   ChevronLeftIcon,
   ChevronRightIcon,
   MoreHorizontalIcon,
+<<<<<<< HEAD
 } from "lucide-react";
+=======
+} from "lucide-react@0.487.0";
+>>>>>>> e12f48468b9193390c7af47631d2c7846def7a34
 
 import { cn } from "./utils";
 import { Button, buttonVariants } from "./button";

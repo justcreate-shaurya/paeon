@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 # Paeon AI: The Clinical-to-Vernacular Bridge
 
 *Digital Medical Representative (DMR) System for Pharma Market Intelligence*
@@ -23,11 +24,27 @@
 | **Fair Balance Asset Generator** | Compliant patient education cards with automatic safety disclosures |
 
 ---
+=======
+  # Design LinguPharma AI Dashboard
+  DEVELOPED BY Shaurya Jain, Swapneel Premchand, Suchethan PH and Tanvir Singh Sandhu.
+
+  # Paeon AI: The Clinical-to-Vernacular Bridge
+
+*Pharma Market Intelligence & Digital Medical Representation for the Plaksha MEDITHON*
+
+
+ 🏛️ Project Overview
+
+*Paeon AI* is a sophisticated, "Fair Balance" compliant digital agent named after the physician to the Greek gods. It bridges the critical communication gap between patients, healthcare professionals (HCPs), and pharmaceutical data.
+
+By utilizing a unique *Slang-to-Clinical Engine*, Paeon AI translates colloquial patient descriptions into structured medical history, while a robust **RAG (Retrieval-Augmented Generation) pipeline** ensures that HCPs receive real-time, grounded information on drug recalls, side effects, and reimbursement protocols.
+>>>>>>> e12f48468b9193390c7af47631d2c7846def7a34
 
 ## ✨ Key Features
 
 ### 1. The Paeon Interpreter (Slang-to-Symptom)
 
+<<<<<<< HEAD
 - **Multi-Language Support**: Hindi, Tamil, Telugu, Spanish, German + 15 more
 - **Clinical Mapping**: Maps to SNOMED-CT, ICD-10, UMLS codes
 - **PII Protection**: Automatic stripping of personal health information (DPDP Act 2023 compliant)
@@ -46,11 +63,26 @@
 - **Fair Balance Engine**: Auto-injects required safety disclosures
 - **Compliance Scoring**: Real-time compliance verification
 - **Export Formats**: Professional PDF and shareable PNG formats
+=======
+* **The Problem:** Patients often describe symptoms using regional slang or vague metaphors (e.g., *"my chest feels like a drum"*), which can lead to clinical misinterpretation.
+* **The Solution:** An NLP layer that maps vernacular language to standardized medical taxonomies (SNOMED-CT/UMLS), allowing the Medical Rep to take accurate, empathetic histories.
+
+### 2. The Oracle Feed (RAG-Driven Intelligence)
+
+ **Real-Time Accuracy:** Unlike standard LLMs, Paeon uses Hybrid Search (Vector + Keyword) to query live databases like **openFDA**, **DailyMed**, and **PubMed**.
+ **Safety First:** Tracks drug recalls and newly identified side effects instantly, providing a "Source View" for every claim to eliminate hallucinations.
+
+### 3. Automated Asset Pipeline
+
+ **Instant Education:** Generates mobile-responsive **Patient Action Cards** and **HCP Deep-Dive Decks**.
+ **Fair Balance Engine:** Automatically injects mandatory safety disclosures and "Boxed Warnings" into every promotional asset, ensuring regulatory compliance by design.
+>>>>>>> e12f48468b9193390c7af47631d2c7846def7a34
 
 ---
 
 ## 🛠️ Technical Stack
 
+<<<<<<< HEAD
 ### Frontend
 | Layer | Technology |
 |-------|------------|
@@ -77,11 +109,22 @@
 | **DPDP Act 2023** | PII stripping, audit logs, data minimization |
 | **Fair Balance** | Automatic safety disclosure injection |
 | **CDS Guidelines** | Non-diagnostic framing, HCP-only workflows |
+=======
+| Layer | Technology |
+| --- | --- |
+| **Frontend** | Next.js 15, Tailwind CSS, Shadcn/UI |
+| **Design System** | Minimalist White & Dark Olive Green (#3B4D2B) |
+| **LLM Orchestration** | LangChain / LlamaIndex |
+| **Vector Database** | Pinecone / Weaviate (Hybrid Search) |
+| **Knowledge Base** | OpenFDA API, DailyMed, PubMed Central |
+| **Compliance** | PII Anonymization Layer (HIPAA/DPDP compliant) |
+>>>>>>> e12f48468b9193390c7af47631d2c7846def7a34
 
 ---
 
 ## 🏗️ Architecture
 
+<<<<<<< HEAD
 ```
 ┌─────────────────────────────────────────────────────────────────┐
 │                        PAEON AI SYSTEM                          │
@@ -111,6 +154,21 @@
 │                                                                 │
 └─────────────────────────────────────────────────────────────────┘
 ```
+=======
+1. **Ingestion:** Scrapes official Pharma labels and clinical trial updates.
+2. **Processing:** Normalizes patient input via the *Interpreter* module.
+3. **Retrieval:** RAG pipeline fetches the most authoritative "Ground Truth."
+4. **Verification:** A "Fair Balance" check ensures risk-to-benefit transparency.
+5. **Output:** Generates UI-driven dashboards and downloadable PDF/Image assets.
+
+---
+
+## 🛡️ Safety & Compliance (The Guardrails)
+
+* **Decision Support, Not Diagnosis:** Framed strictly as a Clinical Decision Support (CDS) tool.
+* **Hallucination Shield:** Mandatory citations for every clinical fact retrieved.
+* **Data Privacy:** Zero-retention policy for Personal Identifiable Information (PII) during the translation phase.
+>>>>>>> e12f48468b9193390c7af47631d2c7846def7a34
 
 ---
 
@@ -118,6 +176,7 @@
 
 ### Prerequisites
 
+<<<<<<< HEAD
 - **Node.js** 18+ and npm
 - **Python** 3.11+
 - **PostgreSQL** 16+
@@ -232,10 +291,40 @@ The application includes comprehensive demo data for testing without a backend:
 Toggle "Regulatory Guardrails" in the header to see Fair Balance warnings.
 
 ---
+=======
+* Node.js 18+
+* Python 3.9+ (for the RAG backend)
+* OpenAI / Anthropic API Key (or local Llama 3 instance)
+
+### Installation
+
+1. **Clone the repo:**
+```bash
+git clone https://github.com/your-username/paeon-ai.git
+
+```
+
+
+2. **Install dependencies:**
+```bash
+npm install
+pip install -r requirements.txt
+
+```
+
+
+3. **Run the development server:**
+```bash
+npm run dev
+
+```
+
+>>>>>>> e12f48468b9193390c7af47631d2c7846def7a34
 
 ## 👥 The Team
 
 Built with 💚 for **Plaksha MEDITHON 2026**
+<<<<<<< HEAD
 
 - Shaurya Jain
 - Swapneel Premchand  
@@ -247,3 +336,5 @@ Built with 💚 for **Plaksha MEDITHON 2026**
 ## 📄 License
 
 This project is developed for educational and demonstration purposes as part of Plaksha MEDITHON 2026.
+=======
+>>>>>>> e12f48468b9193390c7af47631d2c7846def7a34

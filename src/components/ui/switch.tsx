@@ -1,7 +1,11 @@
 "use client";
 
 import * as React from "react";
+<<<<<<< HEAD
 import * as SwitchPrimitive from "@radix-ui/react-switch";
+=======
+import * as SwitchPrimitive from "@radix-ui/react-switch@1.1.3";
+>>>>>>> e12f48468b9193390c7af47631d2c7846def7a34
 
 import { cn } from "./utils";
 

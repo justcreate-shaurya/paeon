@@ -1,7 +1,13 @@
 import * as React from "react";
+<<<<<<< HEAD
 import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu";
 import { cva } from "class-variance-authority";
 import { ChevronDownIcon } from "lucide-react";
+=======
+import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu@1.2.5";
+import { cva } from "class-variance-authority@0.7.1";
+import { ChevronDownIcon } from "lucide-react@0.487.0";
+>>>>>>> e12f48468b9193390c7af47631d2c7846def7a34
 
 import { cn } from "./utils";
 

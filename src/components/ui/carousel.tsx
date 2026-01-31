@@ -3,8 +3,13 @@
 import * as React from "react";
 import useEmblaCarousel, {
   type UseEmblaCarouselType,
+<<<<<<< HEAD
 } from "embla-carousel-react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+=======
+} from "embla-carousel-react@8.6.0";
+import { ArrowLeft, ArrowRight } from "lucide-react@0.487.0";
+>>>>>>> e12f48468b9193390c7af47631d2c7846def7a34
 
 import { cn } from "./utils";
 import { Button } from "./button";

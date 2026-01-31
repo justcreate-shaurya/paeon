@@ -1,7 +1,11 @@
 "use client";
 
 import * as React from "react";
+<<<<<<< HEAD
 import * as RechartsPrimitive from "recharts";
+=======
+import * as RechartsPrimitive from "recharts@2.15.2";
+>>>>>>> e12f48468b9193390c7af47631d2c7846def7a34
 
 import { cn } from "./utils";
 

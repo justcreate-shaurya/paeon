@@ -1,12 +1,17 @@
+<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 import { AlertTriangle, CheckCircle2, FileText, ExternalLink, Search, Loader2, RefreshCw } from 'lucide-react';
 import { useIntelligenceStore } from '../lib/store';
 import { ragApi, IntelFeedItem } from '../lib/api';
+=======
+import { AlertTriangle, CheckCircle2, FileText, ExternalLink } from 'lucide-react';
+>>>>>>> e12f48468b9193390c7af47631d2c7846def7a34
 
 interface IntelligenceFeedProps {
   onSourceClick: (source: any) => void;
 }
 
+<<<<<<< HEAD
 // Demo data for offline/development mode
 const demoFeedItems: IntelFeedItem[] = [
   {
@@ -60,10 +65,57 @@ const demoFeedItems: IntelFeedItem[] = [
     severity: 'info',
     verified: true,
     relevance_score: 0.85
+=======
+const feedItems = [
+  {
+    id: 1,
+    type: 'recall',
+    title: 'FDA Drug Recall Alert',
+    drug: 'Metformin HCl 500mg',
+    content: 'Voluntary recall due to NDMA contamination detected above acceptable daily intake levels.',
+    source: 'FDA MedWatch',
+    date: '2026-01-28',
+    severity: 'high',
+    verified: true
+  },
+  {
+    id: 2,
+    type: 'update',
+    title: 'New Indication Approved',
+    drug: 'Ozempic (semaglutide)',
+    content: 'FDA approves expanded use for cardiovascular risk reduction in adults with type 2 diabetes and established cardiovascular disease.',
+    source: 'FDA Drug Approvals',
+    date: '2026-01-27',
+    severity: 'info',
+    verified: true
+  },
+  {
+    id: 3,
+    type: 'safety',
+    title: 'Safety Communication',
+    drug: 'Eliquis (apixaban)',
+    content: 'Updated black box warning regarding increased bleeding risk when used concomitantly with antiplatelet agents.',
+    source: 'FDA Safety Alerts',
+    date: '2026-01-25',
+    severity: 'medium',
+    verified: true
+  },
+  {
+    id: 4,
+    type: 'update',
+    title: 'Clinical Trial Results',
+    drug: 'Keytruda (pembrolizumab)',
+    content: 'Phase III trial demonstrates significant improvement in progression-free survival for early-stage triple-negative breast cancer.',
+    source: 'NEJM Journal',
+    date: '2026-01-24',
+    severity: 'info',
+    verified: true
+>>>>>>> e12f48468b9193390c7af47631d2c7846def7a34
   }
 ];
 
 export function IntelligenceFeed({ onSourceClick }: IntelligenceFeedProps) {
+<<<<<<< HEAD
   const { feedItems, isLoading, error, setFeedItems, setLoading, setError } = useIntelligenceStore();
   const [searchQuery, setSearchQuery] = useState('');
   const [isSearching, setIsSearching] = useState(false);
@@ -151,6 +203,8 @@ export function IntelligenceFeed({ onSourceClick }: IntelligenceFeedProps) {
       return dateStr;
     }
   };
+=======
+>>>>>>> e12f48468b9193390c7af47631d2c7846def7a34
   const getSeverityColor = (severity: string) => {
     switch (severity) {
       case 'high':
@@ -173,6 +227,7 @@ export function IntelligenceFeed({ onSourceClick }: IntelligenceFeedProps) {
     }
   };
 
+<<<<<<< HEAD
   const displayItems = feedItems.length > 0 ? feedItems : demoFeedItems;
 
   return (
@@ -228,6 +283,17 @@ export function IntelligenceFeed({ onSourceClick }: IntelligenceFeedProps) {
       {/* Feed Items */}
       <div className="flex-1 overflow-y-auto space-y-3">
         {displayItems.map((item) => (
+=======
+  return (
+    <div className="flex flex-col h-full">
+      <div className="mb-4">
+        <h2 className="font-medium text-[#2D2D2D] mb-1">Intelligence Feed</h2>
+        <p className="text-xs text-gray-500">RAG-sourced drug updates & recalls</p>
+      </div>
+
+      <div className="flex-1 overflow-y-auto space-y-3">
+        {feedItems.map((item) => (
+>>>>>>> e12f48468b9193390c7af47631d2c7846def7a34
           <div
             key={item.id}
             className={`rounded-xl border-2 p-4 shadow-sm transition-all hover:shadow-md ${getSeverityColor(item.severity)}`}
@@ -238,7 +304,11 @@ export function IntelligenceFeed({ onSourceClick }: IntelligenceFeedProps) {
                 <div className="mt-0.5">{getSeverityIcon(item.severity)}</div>
                 <div className="flex-1">
                   <h3 className="text-sm font-medium text-[#2D2D2D] mb-1">{item.title}</h3>
+<<<<<<< HEAD
                   <div className="text-xs font-medium text-[#3B4D2B]">{item.drug_name}</div>
+=======
+                  <div className="text-xs font-medium text-[#3B4D2B]">{item.drug}</div>
+>>>>>>> e12f48468b9193390c7af47631d2c7846def7a34
                 </div>
               </div>
               
@@ -251,6 +321,7 @@ export function IntelligenceFeed({ onSourceClick }: IntelligenceFeedProps) {
             </div>
 
             {/* Content */}
+<<<<<<< HEAD
             <p className="text-sm text-[#2D2D2D] mb-3 leading-relaxed">{item.summary}</p>
 
             {/* Relevance Score */}
@@ -268,22 +339,33 @@ export function IntelligenceFeed({ onSourceClick }: IntelligenceFeedProps) {
                 </div>
               </div>
             )}
+=======
+            <p className="text-sm text-[#2D2D2D] mb-3 leading-relaxed">{item.content}</p>
+>>>>>>> e12f48468b9193390c7af47631d2c7846def7a34
 
             {/* Footer */}
             <div className="flex items-center justify-between pt-3 border-t border-current/10">
               <button
+<<<<<<< HEAD
                 onClick={() => onSourceClick({
                   ...item,
                   url: item.source_url,
                   content: item.summary
                 })}
+=======
+                onClick={() => onSourceClick(item)}
+>>>>>>> e12f48468b9193390c7af47631d2c7846def7a34
                 className="flex items-center gap-1 text-xs text-[#606C38] hover:text-[#3B4D2B] font-medium transition-colors"
               >
                 <ExternalLink className="w-3 h-3" />
                 View Source: {item.source}
               </button>
               
+<<<<<<< HEAD
               <span className="text-xs text-gray-500">{formatDate(item.published_at)}</span>
+=======
+              <span className="text-xs text-gray-500">{item.date}</span>
+>>>>>>> e12f48468b9193390c7af47631d2c7846def7a34
             </div>
           </div>
         ))}

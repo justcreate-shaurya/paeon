@@ -1,7 +1,11 @@
 "use client";
 
 import * as React from "react";
+<<<<<<< HEAD
 import * as ProgressPrimitive from "@radix-ui/react-progress";
+=======
+import * as ProgressPrimitive from "@radix-ui/react-progress@1.1.2";
+>>>>>>> e12f48468b9193390c7af47631d2c7846def7a34
 
 import { cn } from "./utils";
 

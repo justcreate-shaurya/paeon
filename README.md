@@ -1,5 +1,3 @@
-
-<<<<<<< HEAD
 # Paeon AI: The Clinical-to-Vernacular Bridge
 
 *Digital Medical Representative (DMR) System for Pharma Market Intelligence*

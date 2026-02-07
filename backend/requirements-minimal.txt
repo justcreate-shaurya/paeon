@@ -1,0 +1,25 @@
+# Paeon AI Backend - Minimal Dependencies (Fast startup)
+# Core FastAPI stack
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+pydantic==2.5.0
+pydantic-settings==2.1.0
+python-multipart==0.0.6
+
+# HTTP Client
+httpx==0.26.0
+
+# Security & Auth
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+
+# Monitoring & Logging
+structlog==24.1.0
+sentry-sdk[fastapi]==1.39.0
+prometheus-client==0.19.0
+
+# Language Detection
+langdetect==1.0.9
+
+# AI/ML (install separately after server starts)
+# google-generativeai==0.3.1
